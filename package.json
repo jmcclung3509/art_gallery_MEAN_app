@@ -36,5 +36,17 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "typescript": "~4.7.2"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmcclung3509/super_MEAN_app.git"
+  },
+  "author": "Jessica Turner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmcclung3509/super_MEAN_app/issues"
+  },
+  "homepage": "https://github.com/jmcclung3509/super_MEAN_app#readme"
 }

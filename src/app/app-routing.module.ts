@@ -3,6 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'view-page',
+    pathMatch: 'full'
+  },
+  {
   path: 'view-page',
   loadChildren: () => 
   import ('./view-page/view-page.module').then ((m)=>m.ViewPageModule
