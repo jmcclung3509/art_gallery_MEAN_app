@@ -19,10 +19,14 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
               "src/assets",
-              "assets", 
-              "static/images"
+              "src/favicon.ico",
+           
+               {
+                "glob": "*",
+                "input": "node_modules/font-awesome/fonts",
+                "output": "assets/fonts/"
+              }
             ],
             "styles": [
               "src/styles.css",

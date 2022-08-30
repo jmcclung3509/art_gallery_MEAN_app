@@ -5,9 +5,11 @@ import { AddPageRoutingModule } from './add-page-routing.module';
 import { AddPageComponent } from './add-page.component';
 
 
+
 @NgModule({
   declarations: [
-    AddPageComponent
+    AddPageComponent,
+
   ],
   imports: [
     CommonModule,
