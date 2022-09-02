@@ -1,5 +1,7 @@
 <div class="container">
-<form>
+<form [formGroup] ="addForm" (ngSubmit)="onSubmit(addForm)">
+  <fieldset>
+    <legend> Create a Super</legend>
     <!-- <div class="text-center">
         <input class="form-control" type="file" 
                 (change)="onChange($event)">
@@ -9,65 +11,65 @@
             Upload
         </button>
     </div> -->
-    <div class="mb-3">
+    <div class="mb-3 form-control">
         <label for="formFile" class="form-label">Upload a picture of your Super</label>
-        <input class="form-control" type="file" id="formFile">
+        <input formControlName = "formFile" class="form-control" type="file" id="formFile">
       </div>
-    <div class="row mb-3">
+    <div class="row mb-3 form-control">
       <label for="name" class="col-sm-2 col-form-label">Super's Name</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="name">
+        <input formControlName = "name" type="text" class="form-control" id="name">
       </div>
     </div>
-    <div class="row mb-3">
+    <div class="row mb-3 form-control">
       <label for="aka" class="col-sm-2 col-form-label">aka</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="aka">
+        <input formControlName = "aka" type="text" class="form-control" id="aka">
       </div>
     </div>
-    <div class="row mb-3">
+    <div class="row mb-3 form-control">
         <label for="description" class="col-sm-2 col-form-label">Description</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="description">
+          <input formControlName = "description" type="text" class="form-control" id="description">
         </div>
         </div>
-    <div class="row mb-3">
+    <div class="row mb-3 form-control">
         <label for="powers" class="col-sm-2 col-form-label">Powers</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="powers">
+          <input formControlName = "powers" type="text" class="form-control" id="powers">
         </div>
       </div>
-      <div class="row mb-3">
+      <div class="row mb-3 form-control">
         <label for="weakness" class="col-sm-2 col-form-label">Weakness</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="weakness">
+          <input formControlName = "weakness" type="text" class="form-control" id="weakness">
         </div>
       </div>
-      <div class="row mb-3">
+      <div class="row mb-3 form-control">
         <label for="appearance" class="col-sm-2 col-form-label">Appearance</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="appearance">
+          <input formControlName = "appearance" type="text" class="form-control" id="appearance">
         </div>
       </div>
      
     
-    <fieldset class="row mb-3">
+    <fieldset class="row mb-3 form-control">
       <legend class="col-form-label col-sm-2 pt-0">Category</legend>
       <div class="col-sm-10">
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+          <input formControlName = "gridRadios" class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Superhero" checked>
           <label class="form-check-label" for="gridRadios1">
             Superhero
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+          <input formControlName = "gridRadios" class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Villain">
           <label class="form-check-label" for="gridRadios2">
             Villain
           </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+            <input formControlName = "gridRadios" class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="Magical Beasts">
             <label class="form-check-label" for="gridRadios3">
               Magical Beast
             </label>
@@ -75,16 +77,11 @@
        
       </div>
     </fieldset>
-    <!-- <div class="row mb-3">
-      <div class="col-sm-10 offset-sm-2">
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="gridCheck1">
-          <label class="form-check-label" for="gridCheck1">
-            Example checkbox
-          </label>
-        </div>
-      </div>
-    </div> -->
+<span> 
+  {{addForm.value | json}}
+</span>
     <button type="submit" class="btn btn-primary">Add Super</button>
+    </fieldset>
+
   </form>
 </div>
