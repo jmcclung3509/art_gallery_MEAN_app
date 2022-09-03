@@ -13,8 +13,8 @@ HttpClient;
 })
 export class AddPageComponent implements OnInit {
   addForm!: FormGroup
-  superInfo!:any
-  formvalues!:any
+  artInfo!:any
+
   http: any;
   form!:any
 
@@ -23,37 +23,33 @@ export class AddPageComponent implements OnInit {
   
 
 constructor(private fb:FormBuilder, http:HttpClient){}
+get id() { return this.addForm.get('id')!;}
+get formFile() { return this.addForm.get('formFile')!;}
+get title() { return this.addForm.get('title')!;}
+get createdBy(){ return this.addForm.get('createdBy')!;}
+get description() {return this.addForm.get('description')!;}
+get date(){ return this.addForm.get('date')!;}
+
 
   ngOnInit(): void {
     this.addForm = this.fb.group({
+      id: '',
     formFile: '',
-    name: '',
-    aka: '',
+    title: '',
+    createdBy: '',
     description:'',
-    powers:'',
-    weakness: '',
-    appearance: '',
-    gridRadios: ''
+    date: ''
+  
 
     })
-    // var body = addForm.values
-    //             var headers = new Headers();
-    //             headers.append('Content-Type', 'application/json');
-    //             return this.http.post(this.urlcategory, body, { headers: headers }).map((data: Response) => data.json()).catch(this.handleError);
-    
 
-// formvalues
-//     this.http.post('http://localhost:3015/super', {formvalues}).subscribe((res:any)=> {
-//       console.log(formvalues)
-//       this.superInfo = res?.data
-//     })
   }
   onSubmit(form:FormGroup){
     console.log(form.value)
     var body = form.value
                 var headers = new Headers();
                 headers.append('Content-Type', 'application/json');
-                return this.http.post('http://localhost:3015/super', body, { headers: headers }).map((data: Response) => data.json()).catch(this.handleError);
+                return this.http.post('http://localhost:3015/art', body, { headers: headers }).map((data: Response) => data.json()).catch(this.handleError);
    
   }
   handleError(error: Response) {

@@ -8,13 +8,13 @@ HttpClient;
   styleUrls: ['./view-page.component.css']
 })
 export class ViewPageComponent implements OnInit {
- superInfo!: any;
+ artInfo!: any;
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.http.get('http://localhost:3015/super').subscribe((res:any)=> {
+    this.http.get('http://localhost:3015/art').subscribe((res:any)=> {
       console.log(res)
-      this.superInfo = res?.data
+      this.artInfo = res?.data
     })
   }
 

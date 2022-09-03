@@ -1,7 +1,7 @@
 <div class="container">
 <form [formGroup] ="addForm" (ngSubmit)="onSubmit(addForm)">
-  <fieldset>
-    <legend> Create a Super</legend>
+
+
     <!-- <div class="text-center">
         <input class="form-control" type="file" 
                 (change)="onChange($event)">
@@ -12,19 +12,19 @@
         </button>
     </div> -->
     <div class="mb-3 form-control">
-        <label for="formFile" class="form-label">Upload a picture of your Super</label>
+        <label for="formFile" class="form-label">Upload a picture </label>
         <input formControlName = "formFile" class="form-control" type="file" id="formFile">
       </div>
     <div class="row mb-3 form-control">
-      <label for="name" class="col-sm-2 col-form-label">Super's Name</label>
+      <label for="title" class="col-sm-2 col-form-label">Title</label>
       <div class="col-sm-10">
-        <input formControlName = "name" type="text" class="form-control" id="name">
+        <input formControlName = "title" type="text" class="form-control" id="title">
       </div>
     </div>
     <div class="row mb-3 form-control">
-      <label for="aka" class="col-sm-2 col-form-label">aka</label>
+      <label for="createdBy" class="col-sm-2 col-form-label">Created By</label>
       <div class="col-sm-10">
-        <input formControlName = "aka" type="text" class="form-control" id="aka">
+        <input formControlName = "createdBy" type="text" class="form-control" id="createdBy">
       </div>
     </div>
     <div class="row mb-3 form-control">
@@ -34,54 +34,21 @@
         </div>
         </div>
     <div class="row mb-3 form-control">
-        <label for="powers" class="col-sm-2 col-form-label">Powers</label>
+        <label for="date" class="col-sm-2 col-form-label">Date</label>
         <div class="col-sm-10">
-          <input formControlName = "powers" type="text" class="form-control" id="powers">
-        </div>
-      </div>
-      <div class="row mb-3 form-control">
-        <label for="weakness" class="col-sm-2 col-form-label">Weakness</label>
-        <div class="col-sm-10">
-          <input formControlName = "weakness" type="text" class="form-control" id="weakness">
-        </div>
-      </div>
-      <div class="row mb-3 form-control">
-        <label for="appearance" class="col-sm-2 col-form-label">Appearance</label>
-        <div class="col-sm-10">
-          <input formControlName = "appearance" type="text" class="form-control" id="appearance">
+          <input formControlName = "date" type="text" class="form-control" id="date">
         </div>
       </div>
      
     
-    <fieldset class="row mb-3 form-control">
-      <legend class="col-form-label col-sm-2 pt-0">Category</legend>
-      <div class="col-sm-10">
-        <div class="form-check">
-          <input formControlName = "gridRadios" class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Superhero" checked>
-          <label class="form-check-label" for="gridRadios1">
-            Superhero
-          </label>
-        </div>
-        <div class="form-check">
-          <input formControlName = "gridRadios" class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Villain">
-          <label class="form-check-label" for="gridRadios2">
-            Villain
-          </label>
-        </div>
-        <div class="form-check">
-            <input formControlName = "gridRadios" class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="Magical Beasts">
-            <label class="form-check-label" for="gridRadios3">
-              Magical Beast
-            </label>
-          </div>
-       
-      </div>
-    </fieldset>
+     
+    
+
 <span> 
   {{addForm.value | json}}
 </span>
-    <button type="submit" class="btn btn-primary">Add Super</button>
-    </fieldset>
+    <button type="submit" class="btn btn-primary">Add </button>
+
 
   </form>
 </div>
