@@ -1,5 +1,7 @@
+
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import {ArtService} from './art.service'
 
 HttpClient;
 @Component({
@@ -9,10 +11,11 @@ HttpClient;
 })
 export class ViewPageComponent implements OnInit {
  artInfo!: any;
-  constructor(private http: HttpClient) {}
+ art!: any
+  constructor( private artService: ArtService) {}
 
   ngOnInit(): void {
-    this.http.get('http://localhost:3015/art').subscribe((res:any)=> {
+    this.artService.getArt().subscribe((res:any)=> {
       console.log(res)
       this.artInfo = res?.data
     })
