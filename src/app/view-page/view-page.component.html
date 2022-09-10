@@ -2,24 +2,24 @@
 <body>
   <div class="container">
     <div class="row">
-    <div class="col">
-    <!-- <div class="card" style="width: 18rem;">
+    <div class="col" *ngFor = "let artItem of artInfo">
+    <div class="card" style="width: 18rem;">
         <img src="{{artInfo.img}}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h3 class="card-title">{{artInfo.title}}</h3>
-          <h6 class="card-title">Created by: {{artInfo.createdBy}}</h6>
+          <h3 class="card-title">{{artItem.title}}</h3>
+          <h6 class="card-title">Created by: {{artItem.createdBy}}</h6>
          
         </div>
         <ul class="list-group list-group-flush">
-           <li class="list-group-item"> Description: {{artInfo.description}}</li>
+           <li class="list-group-item"> Description: {{artItem.description}}</li>
           <li class="list-group-item">Date: {{artInfo.date}}</li>
         </ul>
   
-        <button type="submit" class="btn btn-primary">Edit Super</button>
+        <button type="submit" class="btn btn-primary">Edit Art Info</button>
       </div>
-      </div> -->
+      </div>
 
-          <div class="card" style="width: 18rem;">
+          <!-- <div class="card" style="width: 18rem;">
         <img src="assets/images/icons8-batman-emoji.gif" class="card-img-top" alt="...">
         <div class="card-body">
           <h3 class="card-title">Monster</h3>
@@ -33,8 +33,8 @@
         </ul>
   
         <button type="submit" class="btn btn-primary">Edit Art Info</button>
-      </div>
-      </div>
+      </div> -->
+      <!-- </div> -->
       </div>
       </div>
 

@@ -1,3 +1,4 @@
+import { ArtService } from './art.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -12,6 +13,7 @@ import { ViewPageComponent } from './view-page.component';
   imports: [
     CommonModule,
     ViewPageRoutingModule
-  ]
+  ],
+  providers: [ArtService]
 })
 export class ViewPageModule { }

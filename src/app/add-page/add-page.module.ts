@@ -1,3 +1,4 @@
+import { AddPageService } from './add-page.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -11,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AddPageComponent,
+    AddPageComponent
 
   ],
   imports: [
@@ -19,7 +20,9 @@ import { FormsModule } from '@angular/forms';
     AddPageRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
-  ]
+    HttpClientModule,
+
+  ],
+  providers: [AddPageService]
 })
 export class AddPageModule { }
