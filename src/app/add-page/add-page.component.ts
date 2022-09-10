@@ -18,16 +18,16 @@ export class AddPageComponent implements OnInit {
 
 
 constructor(private router: Router, private addPage:AddPageService, private fb: FormBuilder){}
-get id() { return this.addForm.get('id')!;}
-get formFile() { return this.addForm.get('formFile')!;}
-get title() { return this.addForm.get('title')!;}
-get createdBy(){ return this.addForm.get('createdBy')!;}
-get description() {return this.addForm.get('description')!;}
-get date(){ return this.addForm.get('date')!;}
+// get id() { return this.addForm.get('id')!;}
+// get formFile() { return this.addForm.get('formFile')!;}
+// get title() { return this.addForm.get('title')!;}
+// get createdBy(){ return this.addForm.get('createdBy')!;}
+// get description() {return this.addForm.get('description')!;}
+// get date(){ return this.addForm.get('date')!;}
 
   ngOnInit(): void {
     this.addForm = this.fb.group({
-      id: '',
+      id: null,
     formFile: '',
     title: '',
     createdBy: '',
@@ -35,7 +35,7 @@ get date(){ return this.addForm.get('date')!;}
     date: ''
     })
   }
-submit(form: FormGroup) {
+onSubmit(form: FormGroup) {
   const payload = form.value()
   // {
   //   img: "assets/images/icons8-batman-emoji.gif",
@@ -47,7 +47,7 @@ submit(form: FormGroup) {
   // }
   this.addPage.addPage(payload).subscribe(res=>{
     console.log(res)
-  this.router.navigate(['/'])
+  this.router.navigate(['/add-page'])
 });
 
 }
